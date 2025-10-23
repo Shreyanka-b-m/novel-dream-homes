@@ -41,6 +41,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  user-select: none;
 }
 
 /* Form elements inherit font */
@@ -55,7 +56,7 @@ button {
   outline: none;
 }
 
-/* Optional: smooth scrolling for the whole page */
+/* Smooth scrolling for the whole page */
 html {
   scroll-behavior: smooth;
 }

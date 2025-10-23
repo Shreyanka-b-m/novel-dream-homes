@@ -1,4 +1,5 @@
 import { Bebas_Neue, Poppins } from "next/font/google";
+import Footer from "@/components/Footer/Footer";
 import "./reset.css";
 import "./globals.css";
 
@@ -25,7 +26,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} ${bebas.variable} `}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

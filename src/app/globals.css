@@ -2,6 +2,11 @@
   --ndh-white: #ffffff;
   --ndh-purple: #582d5d;
   --ndh-yellow: #fff6a4;
+  --ndh-light-gray: #f9fafb;
+  --ndh-dark-gray: #4b5563;
+  --ndh-text-gray: #222222;
+  --ndh-stroke-gray: #c2c2c2;
+  --ndh-stroke-light-gray: #e5e7eb;
   --ndh-border-radius: 8px;
 }
 
