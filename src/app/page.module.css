@@ -30,7 +30,6 @@
 }
 
 .heroContent h1 {
-  font-weight: 400;
   margin-bottom: 24px;
   text-shadow: 0px 0px 4.6px #000000;
   padding: 0px 20px;
@@ -46,6 +45,18 @@
 }
 /********* Hero Section Ends *********/
 
+/********* Subscribe Section Starts *********/
+.newsletterSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 110px;
+}
+
+.newsletterFlexItem {
+  flex: 1;
+}
+/********* Subscribe Section Ends *********/
+
 @media (max-width: 976px) {
   .heroWrapper {
     height: 540px;
@@ -53,6 +64,10 @@
 
   .heroContent {
     bottom: 60px;
+  }
+
+  .newsletterSection {
+    gap: 45px;
   }
 }
 
@@ -63,5 +78,14 @@
 
   .heroContent {
     bottom: 40px;
+  }
+
+  .newsletterSection {
+    gap: 0px;
+    flex-direction: column;
+  }
+
+  .newsletterFlexItem {
+    padding: 15px;
   }
 }

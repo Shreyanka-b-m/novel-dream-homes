@@ -22,15 +22,26 @@ body {
 h1,
 h2 {
   font-family: var(--font-bebas);
+  font-weight: 400;
 }
 
 h1 {
   font-size: 67px;
 }
 
-p, button {
+h2 {
+  font-size: 45px;
+}
+
+p {
+  color: var(--ndh-dark-gray);
+}
+
+p,
+button {
   font-size: 16px;
 }
+
 
 .container {
   width: 100%;
@@ -50,7 +61,12 @@ p, button {
     font-size: 40px;
   }
 
-  p, button {
+  h2 {
+    font-size: 30px;
+  }
+
+  p,
+  button {
     font-size: 14px;
   }
 
@@ -64,7 +80,12 @@ p, button {
     font-size: 28px;
   }
 
-  p, button {
+  h2 {
+    font-size: 20px;
+  }
+
+  p,
+  button {
     font-size: 12px;
   }
 
