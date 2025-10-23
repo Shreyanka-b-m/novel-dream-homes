@@ -1,47 +1,67 @@
-/* === Hero Section === */
-.hero {
+/********* Hero Section Starts *********/
+.heroWrapper {
   position: relative;
   width: 100%;
   height: 640px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  border-radius: var(--ndh-border-radius);
   overflow: hidden;
-  border-radius: 12px;
-  padding-bottom: 120px;
 }
 
-.heroImage {
-  z-index: 0;
-  padding: 45px 100px;
-}
-
-/* .overlay {
+.heroOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 70%
+  );
   z-index: 1;
-} */
+}
 
 .heroContent {
-  position: relative;
-  z-index: 2;
+  position: absolute;
   text-align: center;
   color: var(--ndh-white);
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 100%;
 }
 
 .heroContent h1 {
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 24px;
   text-shadow: 0px 0px 4.6px #000000;
+  padding: 0px 20px;
 }
 
-.btn {
-  background-color: #fff6a4;
+.heroContent button {
+  background-color: var(--ndh-yellow);
   color: var(--ndh-purple);
-  font-size: 16px;
-  padding: 16px 24px;
-  border-radius: 8px;
   border: none;
+  padding: 16px 24px;
+  border-radius: var(--ndh-border-radius);
   cursor: pointer;
+}
+/********* Hero Section Ends *********/
+
+@media (max-width: 976px) {
+  .heroWrapper {
+    height: 540px;
+  }
+
+  .heroContent {
+    bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroWrapper {
+    height: 340px;
+  }
+
+  .heroContent {
+    bottom: 40px;
+  }
 }

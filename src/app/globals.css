@@ -1,6 +1,8 @@
 :root {
   --ndh-white: #ffffff;
   --ndh-purple: #582d5d;
+  --ndh-yellow: #fff6a4;
+  --ndh-border-radius: 8px;
 }
 
 * {
@@ -21,7 +23,7 @@ h1 {
   font-size: 67px;
 }
 
-p {
+p, button {
   font-size: 16px;
 }
 
@@ -43,12 +45,12 @@ p {
     font-size: 40px;
   }
 
-  p {
+  p, button {
     font-size: 14px;
   }
 
   .container {
-    padding: 20px 40px;
+    padding: 20px 50px;
   }
 }
 
@@ -57,7 +59,7 @@ p {
     font-size: 28px;
   }
 
-  p {
+  p, button {
     font-size: 12px;
   }
 
