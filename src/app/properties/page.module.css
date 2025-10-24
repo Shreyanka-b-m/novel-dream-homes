@@ -6,44 +6,173 @@
 
 .mapSection {
   flex: 1;
-}
-
-.mapContainer {
-  height: 100%;
-  width: 100%;
+  position: relative;
+  min-height: 400px; /* Ensure minimum height */
 }
 
 .listSection {
   flex: 1;
   overflow-y: auto;
-  padding: 1rem;
-  background-color: #f9f9f9;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-left: 1px solid #e9ecef;
+}
+
+.listSection h2 {
+  margin: 0 0 1.5rem 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.propertiesList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 0.5rem;
 }
 
 .card {
-  background: #fff;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card h3 {
-  margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 600;
+  flex-grow: 1;
 }
 
-.card p {
-  margin: 0.2rem 0;
+.address {
+  margin: 0.5rem 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .price {
   font-weight: bold;
   color: #2a9d8f;
+  font-size: 1.2rem;
+  text-align: right;
 }
 
+.noProperties {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 3rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px dashed #dee2e6;
+  grid-column: 1 / -1;
+}
+
+
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+    height: 100vh; /* Use full viewport height */
   }
+
+  .mapSection {
+    flex: none; /* Remove flex grow */
+    height: 45vh; /* Fixed height for mobile */
+    min-height: 300px; /* Minimum height */
+    width: 100%;
+    position: relative;
+  }
+
+  .listSection {
+    flex: none; /* Remove flex grow */
+    height: 55vh; /* Fixed height for mobile */
+    width: 100%;
+    padding: 1rem;
+    border-left: none;
+    border-top: 1px solid #e9ecef;
+    overflow-y: auto; /* Ensure scrolling */
+  }
+
+  /* .propertiesList {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
+  } */
+
+  .imageContainer {
+    height: 160px;
+  }
+
+  .listSection h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    height: 100vh; /* Full viewport height */
+  }
+
+  .mapSection {
+    height: 40vh; /* Slightly smaller map on very small screens */
+    min-height: 250px;
+  }
+
+  .listSection {
+    height: 60vh; /* Slightly larger list area */
+    padding: 0.75rem;
+  }
+
+  .cardContent {
+    padding: 1rem;
+  }
+
+  .imageContainer {
+    height: 140px;
+  }
+}
+
+/* Ensure Leaflet map container has proper height */
+:global(.leaflet-container) {
+  height: 100% !important;
+  width: 100% !important;
 }

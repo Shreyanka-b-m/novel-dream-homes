@@ -24,6 +24,22 @@ const properties = [
     lng: -96.797,
     price: "$400,000",
   },
+  {
+    id: 4,
+    name: "Potomac House",
+    address: "789 Green Ave, Dallas",
+    lat: 43.7767,
+    lng: -90.797,
+    price: "$550,000",
+  },
+  {
+    id: 5,
+    name: "Amherst House",
+    address: "789 Green Ave, Dallas",
+    lat: 46.7767,
+    lng: -96.797,
+    price: "$250,000",
+  },
 ];
 
 export default properties;
