@@ -45,7 +45,7 @@
 }
 /********* Hero Section Ends *********/
 
-/********* Subscribe Section Starts *********/
+/********* Subscribe to Newsletter Section Starts *********/
 .newsletterSection {
   display: flex;
   justify-content: space-between;
@@ -55,7 +55,7 @@
 .newsletterFlexItem {
   flex: 1;
 }
-/********* Subscribe Section Ends *********/
+/********* Subscribe to Newsletter Section Ends *********/
 
 @media (max-width: 976px) {
   .heroWrapper {
