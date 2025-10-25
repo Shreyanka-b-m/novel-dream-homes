@@ -1,18 +1,17 @@
-@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
-
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
 
 .leaflet-tooltip {
-  color: #fdfdfd !important;
-  background-color: #c16060 !important;
-  border: 1px solid #c16060 !important;
+  color: var(--ndh-white) !important;
+  background-color: #832525 !important;
+  border: 1px solid #832525 !important;
 }
 
 .leaflet-tooltip:before {
-  border-top-color: #c16060;
+  border-top-color: #832525 !important;
 }
 
 .leaflet-tooltip:after {
-  border-top-color: #c16060;
+  border-top-color: #832525 !important;
 }
 
 :root {
